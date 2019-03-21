@@ -60,5 +60,6 @@ typings/
 # Node Export Files
 /dist
 
-./lib/vue/*/script.js
-./lib/vue/*/script.d.ts
+/lib/vue/*/index.js
+/lib/vue/*/index.js.map
+package-lock.json

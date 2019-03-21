@@ -1,4 +1,4 @@
-import NoticeDialog from "./NoticeDialog/index.vue";
+import NoticeDialog from "./NoticeDialog";
 
 export default {
     NoticeDialog

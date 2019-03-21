@@ -3,12 +3,12 @@ import vue from 'rollup-plugin-vue';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-    input: 'lib/vue/index.ts',
+    input: 'lib/vue/NoticeDialog/index.vue',
     output: {
         format: 'esm',
-        file: 'dist/vue/index.js',
-        sourcemap: true
+        file: 'lib/vue/NoticeDialog/index.js'
     },
+    external: ['vue', 'element-ui'],
     plugins: [
         typescript({
             tsconfig: 'tsconfig.prod.json'

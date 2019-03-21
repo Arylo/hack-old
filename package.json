@@ -8,13 +8,13 @@
     "clean": "rimraf dist",
     "tsc": "tsc --locale zh-cn --pretty",
     "build": "npm run tsc -- -P tsconfig.json",
-    "build:prod": "npm run tsc -- -P tsconfig.prod.json && rollup --config ./project_scripts/rollup.config.js ",
+    "build:prod": "rollup --config ./project_scripts/rollup.config.js && npm run tsc -- -P tsconfig.prod.json",
     "build:test": "npm run tsc -- -P tsconfig.test.json",
     "pretest": "npm run clean && npm run build:test",
     "test": "ava dist/test/**/*.{spec,e2e}.js",
     "lint": "npm run lint:typescript && npm run lint:javascript",
     "lint:typescript": "tslint {lib,test}/**/*.ts",
-    "lint:javascript": "eslint ./**/*.js"
+    "lint:javascript": "eslint ./project_scripts/**/*.js"
   },
   "keywords": [
     "arylo",
@@ -44,6 +44,7 @@
     "@commitlint/lint": "^7.2.1",
     "@types/node": "^10.12.12",
     "ava": "^1.0.1",
+    "element-ui": "^1.4.13",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
@@ -60,14 +61,11 @@
     "rollup-plugin-vue": "^4.7.2",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
   "peerDependencies": {
     "element-ui": "^1.3.7",
     "vue": "^2.3.4"
-  },
-  "dependencies": {
-    "element-ui": "^1.4.13",
-    "vue": "^2.6.10"
   }
 }
