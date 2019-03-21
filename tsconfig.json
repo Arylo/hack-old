@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "importHelpers": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "newLine": "LF",
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": ["lib/**/*", "test/**/*"]
+}
